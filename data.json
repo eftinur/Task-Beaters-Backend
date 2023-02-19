@@ -1,0 +1,19 @@
+[
+    {
+        "title": "morning wrokout",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint pariatur accusamus fuga libero dolorem numquam architecto. Vero nostrum voluptatum, esse minima voluptatem aliquid suscipit commodi ad dolorem optio harum eos quia aut.",
+        "email": "test01@gmail.com"
+    },
+    {
+        "title": "SCRUM meeting",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint pariatur accusamus fuga libero dolorem consectetur adipisicing elit. numquam architecto. Vero nostrum voluptatum, esse minima voluptatem aliquid suscipit commodi ad dolorem optio harum eos quia consectetur adipisicing elit aut.",
+        "email": "test01@gmail.com"
+
+    },
+    {
+        "title": "checking mails",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sint pariatur accusamus fuga libero dolorem consectetur adipisicing elit. numquam architecto. Vero nostrum voluptatum, esse minima voluptatem aliquid suscipit commodi ad dolorem optio.",
+        "email": "test02@gmail.com"
+
+    }
+]
