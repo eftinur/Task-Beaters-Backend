@@ -40,11 +40,11 @@ async function run() {
             res.send(tasks);
         })
 
-        app.get('/patients/:id', async(req, res) => {
+        app.get('/tasks/:id', async(req, res) => {
             const id = req.params.id;
-            const query = { _id: ObjectId(id) };
-            const patient = await patientCollection.findOne(query);
-            res.send(patient);
+            const query = { _id: new ObjectId(id) };
+            const task = await taskCollection.findOne(query);
+            res.send(task);
         })
 
         app.post('/tasks', async(req, res) => {
@@ -53,27 +53,25 @@ async function run() {
             res.send(result);
         })
 
-        app.delete('/patients/:id', async(req, res) => {
+        app.get('/update/:id', async(req, res) => {
             const id = req.params.id;
-            const query = { _id: ObjectId(id) };
-            const result = await patientCollection.deleteOne(query);
-            res.send(result);
+            const query = { _id: new ObjectId(id) };
+            const task = await taskCollection.findOne(query);
+            res.send(task);
         })
 
-        app.put('/patients/:id', async(req, res) => {
+        app.put('/tasks/:id', async(req, res) => {
             const id = req.params.id;
-            const filter = { _id: ObjectId(id) };
-            const patient = req.body;
+            const filter = { _id: new ObjectId(id) };
+            const task = req.body;
             const option = { upsert: true };
             const updatedDoc = {
                 $set: {
-                    firstName: patient.firstName,
-                    lastName: patient.lastName,
-                    phone: patient.phone,
-                    email: patient.email
+                    title: task.title,
+                    description: task.description
                 }
             }
-            const result = await patientCollection.updateOne(filter, updatedDoc, option);
+            const result = await taskCollection.updateOne(filter, updatedDoc, option);
             res.send(result);
         })
       
